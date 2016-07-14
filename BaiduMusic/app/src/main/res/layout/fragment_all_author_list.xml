@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty_five_dp"
+        android:background="@color/colorTitle"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/all_author_list_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/five_dp"
+            android:src="@mipmap/ic_back_normal" />
+
+        <TextView
+            android:id="@+id/combination_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/all_author_list_return"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fifteen_sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/bt_sort_a_z_nor" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/all_author_list_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

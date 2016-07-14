@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+            <!--clipChildren子元素超出部分不切掉-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/recommend_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_hundred_thirty_dp"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                android:layout_marginStart="@dimen/twenty_dp"
+                android:clipChildren="false" />
+
+            <LinearLayout
+                android:id="@+id/recommend_viewgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/recommend_view_pager"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/twenty_dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" />
+
+
+            <LinearLayout
+                android:id="@+id/recommend_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommend_view_pager"
+                android:layout_margin="@dimen/twenty_dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/recommend_music_lib" />
+
+                <ImageView
+                    android:id="@+id/recommend_all_author"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/recommend_allauthor" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/recommend_today_rec" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:layout_below="@id/recommend_linear_layout"
+                android:background="@color/colorLine" />
+
+            <RelativeLayout
+                android:id="@+id/recommend_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommend_linear_layout"
+                android:layout_margin="@dimen/twenty_dp">
+
+                <ImageView
+                    android:id="@+id/recommend_song_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/ic_recommend_song" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@id/recommend_song_iv"
+                    android:text="@string/song_recommend"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/twenty_sp" />
+
+                <ImageView
+                    android:id="@+id/action_more_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_action_more" />
+
+                <TextView
+                    android:id="@+id/recommend_more_song_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/action_more_iv"
+                    android:text="@string/more"
+                    android:textColor="@color/colorDarkGrey" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommend_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommend_relative_layout"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

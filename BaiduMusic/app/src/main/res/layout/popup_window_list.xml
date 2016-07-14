@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp"
+        android:background="@color/colorLightGrey"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pop_play_pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:src="@mipmap/bt_list_button_roundplay_normal" />
+
+        <TextView
+            android:id="@+id/pop_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:text="@string/cleat_all"
+            android:textSize="@dimen/fifteen_sp" />
+
+        <RelativeLayout
+            android:id="@+id/pop_play_list_tv"
+            android:layout_width="@dimen/two_hundred_twenty_dp"
+            android:layout_height="@dimen/forty_dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/five_dp"
+            android:background="@color/colorGreyWhite">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/playing_list"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/pop_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout" />
+</RelativeLayout>

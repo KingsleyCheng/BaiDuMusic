@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dllo.baidumusic">
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_aboutus_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".welcome.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MainActivity"></activity>
+        <activity
+            android:name=".musiclibrary.radiostation.radiototal.RadioTotalActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".songplaypage.PlayPageActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".songplaypage.playinglist.PlayingListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".musiclibrary.radiostation.radiototal.radioplay.RadioPlayActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".musiclibrary.mv.MvPlayActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".totalfragment.login.LoginImmediatelyActivity"></activity>
+        <activity android:name=".totalfragment.login.LoginActivity"></activity>
+        <activity android:name=".totalfragment.login.RegisterActivity"></activity>
+
+        <service android:name=".musicplayservice.MusicPlayService" />
+
+
+        <!--<service-->
+        <!--android:name="cn.bmob.push.lib.service.PushService"-->
+        <!--android:exported="true"-->
+        <!--android:label="PushService"-->
+        <!--android:process=":bmobpush">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="cn.bmob.push.lib.service.PushService" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+        <!--&lt;!&ndash; 用于进程保活 &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name="cn.bmob.push.lib.service.PushNotifyService"-->
+        <!--android:process=":bmobpush"></service>-->
+
+        <!--<receiver android:name="cn.bmob.push.PushReceiver">-->
+        <!--<intent-filter>-->
+        <!--&lt;!&ndash; 系统启动完成后会调用 &ndash;&gt;-->
+        <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+        <!--&lt;!&ndash; 解锁完成后会调用 &ndash;&gt;-->
+        <!--<action android:name="android.intent.action.USER_PRESENT" />-->
+        <!--&lt;!&ndash; 监听网络连通性 &ndash;&gt;-->
+        <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--&lt;!&ndash;<receiver android:name=".MyPushMessageReceiver">&ndash;&gt;-->
+        <!--&lt;!&ndash;<intent-filter>&ndash;&gt;-->
+        <!--&lt;!&ndash;<action android:name="cn.bmob.push.action.MESSAGE" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</intent-filter>&ndash;&gt;-->
+        <!--&lt;!&ndash;</receiver>&ndash;&gt;-->
+        <!--<receiver-->
+        <!--android:name="cn.bmob.push.PushNotifyReceiver"-->
+        <!--android:process=":bmobpush">-->
+        <!--<intent-filter>-->
+        <!--&lt;!&ndash; 接收心跳广播的action &ndash;&gt;-->
+        <!--<action android:name="cn.bmob.push.action.HEARTBEAT" />-->
+        <!--&lt;!&ndash; 接收唤醒广播的action &ndash;&gt;-->
+        <!--<action android:name="cn.bmob.push.action.NOTIFY" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

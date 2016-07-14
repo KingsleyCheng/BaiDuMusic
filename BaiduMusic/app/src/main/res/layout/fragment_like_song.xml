@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty_five_dp"
+        android:background="@color/colorTitle"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/like_song_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/five_dp"
+            android:src="@mipmap/ic_back_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/like_song"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fifteen_sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/like_song_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp" />
+
+    <TextView
+        android:id="@+id/nothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/noting_music"
+        android:textSize="@dimen/twenty_five_sp"
+        android:visibility="gone" />
+</RelativeLayout>

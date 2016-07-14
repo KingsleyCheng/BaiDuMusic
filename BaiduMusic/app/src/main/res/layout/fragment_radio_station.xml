@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:background="@mipmap/radio_page" />
+
+        <TextView
+            android:id="@+id/more_radio"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty_dp"
+            android:layout_margin="@dimen/twenty_dp"
+            android:background="@drawable/radio_shape"
+            android:gravity="center"
+            android:text="@string/more_radio"
+            android:textSize="@dimen/twenty_sp" />
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

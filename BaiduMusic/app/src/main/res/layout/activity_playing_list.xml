@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBlack">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp">
+
+
+        <ImageView
+            android:id="@+id/play_page_play_list_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/bt_list_button_roundplay_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/playing_list"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/twenty_sp" />
+
+        <TextView
+            android:id="@+id/play_page_list_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:text="@string/cleat_all"
+            android:textColor="@color/colorGreyWhite" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/play_page_list_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_dp"
+        android:layout_below="@id/relativeLayout"
+        android:background="@color/colorGreyWhite" />
+
+    <ListView
+        android:id="@+id/play_page_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/play_page_list_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fifty_dp" />
+
+    <TextView
+        android:id="@+id/play_page_list_return"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/close"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/twenty_sp" />
+</RelativeLayout>

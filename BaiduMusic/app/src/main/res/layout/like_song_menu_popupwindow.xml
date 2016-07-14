@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/like_song_menu_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty_dp"
+            android:background="@color/colorGreyWhite"
+            android:gravity="center"
+            android:textSize="@dimen/twenty_sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/like_song_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty_five_dp"
+            android:layout_marginTop="@dimen/twenty_five_dp"
+            android:alpha="1">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDarkGrey" />
+
+            <ImageView
+                android:id="@+id/like_song_love_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:src="@mipmap/ic_mymusic_like" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/like_song_love_iv"
+                android:text="@string/like_song" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:src="@mipmap/ic_songlist_detail_nor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:layout_below="@id/like_song_love_iv"
+                android:background="@color/colorDarkGrey" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/like_song_menu_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout"
+        android:alpha="0.5"
+        android:background="@color/colorBlack" />
+</RelativeLayout>

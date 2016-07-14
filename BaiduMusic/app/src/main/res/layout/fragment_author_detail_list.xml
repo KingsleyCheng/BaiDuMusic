@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/author_detail_list_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_hundred_eighty_dp"
+            android:background="@mipmap/default_album_topic_detail"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/author_detail_list_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fifteen_dp"
+            android:background="@mipmap/ic_back_normal" />
+
+        <LinearLayout
+            android:id="@+id/liner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/author_detail_list_iv"
+            android:layout_margin="@dimen/ten_dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/author_detail_list_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="tag"
+                android:textColor="@color/colorWhite" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_dp"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/artist_dictionary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/author_detail_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/liner_layout"
+            android:layout_alignStart="@id/liner_layout"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/twenty_sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/author_detail_list_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten_dp" />
+
+</LinearLayout>

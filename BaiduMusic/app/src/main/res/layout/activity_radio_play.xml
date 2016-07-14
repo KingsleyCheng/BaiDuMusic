@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRadioBackground"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:layerType="software">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten_dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/radio_play_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bt_sceneplay_return" />
+
+        <TextView
+            android:id="@+id/radio_play_scname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:drawableRight="@mipmap/bt_sceneplay_show_scene_list"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/bt_sceneplay_more" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/radio_play_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/four_hundred_dp"
+        android:layout_marginLeft="@dimen/fifty_dp"
+        android:layout_marginRight="@dimen/fifty_dp"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:clipChildren="false">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_button_trash_normal" />
+
+        <ImageView
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_button_like_normal" />
+
+        <ImageView
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_button_download_normal" />
+
+        <ImageView
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_button_pic_normal" />
+    </LinearLayout>
+
+</LinearLayout>
